@@ -1,0 +1,16 @@
+Package: autotranslate
+Type: Package
+Title: Access Google Translate and Microsoft Translator Text Translation APIs
+Version: 0.0-1
+Author: Richard Cotton <richierocks@gmail.com>
+Maintainer: Richard Cotton <richierocks@gmail.com>
+Description: Automatically translate text using Google Translate and Microsoft 
+    Translator.
+Imports:
+    future,
+    httr,
+    xml2
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
