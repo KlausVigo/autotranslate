@@ -9,6 +9,8 @@ get_translations(x, lang_to, lang_from = "en", api_key,
   engine = c("google", "microsoft"))
 }
 \arguments{
+\item{x}{A character vector containing text to translate.}
+
 \item{lang_to}{A two letter language code describing the language to
 translate to. See \code{MICROSOFT_LANGS} for available values.}
 
@@ -16,11 +18,14 @@ translate to. See \code{MICROSOFT_LANGS} for available values.}
 translate from, defaulting to English. See \code{MICROSOFT_LANGS} for
 available values.}
 
+\item{api_key}{A string containing a subscription key to the Google Translate
+or Microsfot Translator API (depending upon the \code{engine}).}
+
 \item{parallelization_strategy}{A string naming a parallelization strategy,
 passed to \code{\link[future]{plan}}.}
 
-\item{google_key}{A string containing a subscription key to
-Google Translate API.}
+\item{engine}{A string naming the translation engine to use. Either "google"
+or "microsoft".}
 }
 \value{
 A character vector of translated strings.
@@ -28,7 +33,6 @@ A character vector of translated strings.
 \description{
 Translate text, choosing whether you use Google Translate or Microsoft
 Translator.
-#' @param x A character vector containing text to translate.
 }
 \examples{
 \donttest{

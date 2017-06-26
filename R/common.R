@@ -2,16 +2,18 @@
 #'
 #' Translate text, choosing whether you use Google Translate or Microsoft
 #' Translator.
-#' #' @param x A character vector containing text to translate.
+#' @param x A character vector containing text to translate.
 #' @param lang_to A two letter language code describing the language to
 #' translate to. See \code{MICROSOFT_LANGS} for available values.
 #' @param lang_from A two letter language code describing the language to
 #' translate from, defaulting to English. See \code{MICROSOFT_LANGS} for
 #' available values.
-#' @param google_key A string containing a subscription key to
-#' Google Translate API.
+#' @param api_key A string containing a subscription key to the Google Translate
+#' or Microsfot Translator API (depending upon the \code{engine}).
 #' @param parallelization_strategy A string naming a parallelization strategy,
 #' passed to \code{\link[future]{plan}}.
+#' @param engine A string naming the translation engine to use. Either "google"
+#' or "microsoft".
 #' @return A character vector of translated strings.
 #' @seealso \code{\link{get_google_translations}},
 #' \code{\link{get_microsoft_translations}}
