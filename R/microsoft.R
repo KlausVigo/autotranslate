@@ -52,8 +52,10 @@ get_microsoft_access_token <- function(microsoft_key = Sys.getenv("MICROSOFT_TRA
 #' \code{\link{get_microsoft_access_token}}.
 #' @param parallelization_strategy A string naming a parallelization strategy,
 #' passed to \code{\link[future]{plan}}.
+#' @return A character vector of translated strings.
 #' @references
 #' \url{https://docs.microsofttranslator.com/text-translate.html#!/default/get_Translate}
+#' @seealso \code{\link{get_translations}}, \code{\link{get_google_translations}}
 #' @examples
 #' \donttest{
 #' # Not tested due to need for Microsoft Cognitive

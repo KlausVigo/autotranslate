@@ -8,12 +8,13 @@
 #' translate from, defaulting to English. See \code{MICROSOFT_LANGS} for
 #' available values.
 #' @param google_key A string containing a subscription key to
-#' Google Translate API.
+#' Google Translate API. Defaults to \code{Sys.getenv("GOOGLE_TRANSLATE_API_KEY")}.
 #' @param parallelization_strategy A string naming a parallelization strategy,
 #' passed to \code{\link[future]{plan}}.
-#' @return A character vector of translated strings
+#' @return A character vector of translated strings.
 #' @references
 #' \url{https://cloud.google.com/translate/docs/reference/translate}
+#' @seealso \code{\link{get_translations}}, \code{\link{get_microsoft_translations}}
 #' @examples
 #' \donttest{
 #' # Not tested due to need for Google Translate API key
@@ -169,16 +170,4 @@ GOOGLE_LANGS <- c(
   Yiddish = "yi",
   Yoruba = "yo",
   Zulu = "zu"
-)
-
-#' Quotes about translations
-#'
-#' Some quotes about translating text, for use in the examples.
-#' @docType data
-#' @format A character vector.
-#' @export
-TRANSLATION_QUOTES <- c(
-  borges = "The original is unfaithful to the translation.",
-  jowett = "All translation is a compromise - the effort to be literal and the effort to be idiomatic.",
-  friar  = "Even the simplest word can never be rendered with its exact equivalent into another language."
 )

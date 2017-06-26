@@ -25,6 +25,9 @@ Microsoft Cognitive Services Translator API, passed to
 \item{parallelization_strategy}{A string naming a parallelization strategy,
 passed to \code{\link[future]{plan}}.}
 }
+\value{
+A character vector of translated strings.
+}
 \description{
 Gets translations from Microsoft Translator.
 }
@@ -37,4 +40,7 @@ get_microsoft_translations(TRANSLATION_QUOTES, sample(MICROSOFT_LANGS, 1))
 }
 \references{
 \url{https://docs.microsofttranslator.com/text-translate.html#!/default/get_Translate}
+}
+\seealso{
+\code{\link{get_translations}}, \code{\link{get_google_translations}}
 }

@@ -19,13 +19,13 @@ translate from, defaulting to English. See \code{MICROSOFT_LANGS} for
 available values.}
 
 \item{google_key}{A string containing a subscription key to
-Google Translate API.}
+Google Translate API. Defaults to \code{Sys.getenv("GOOGLE_TRANSLATE_API_KEY")}.}
 
 \item{parallelization_strategy}{A string naming a parallelization strategy,
 passed to \code{\link[future]{plan}}.}
 }
 \value{
-A character vector of translated strings
+A character vector of translated strings.
 }
 \description{
 Gets translations from Google Translate.
@@ -38,4 +38,7 @@ get_google_translations(TRANSLATION_QUOTES, sample(GOOGLE_LANGS, 1))
 }
 \references{
 \url{https://cloud.google.com/translate/docs/reference/translate}
+}
+\seealso{
+\code{\link{get_translations}}, \code{\link{get_microsoft_translations}}
 }
